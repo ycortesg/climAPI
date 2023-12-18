@@ -118,23 +118,67 @@ function updateDB(key, provinceContent) {
 }
 
 function getAllDB() {
-    return new Promise((resolve, reject) => {
-      // variables de indexDB
-      let transaction = db.transaction([STORE_NAME], "readwrite");
-      let objectStore = transaction.objectStore(STORE_NAME);
-  
-      // accionar getAll
-      let request = objectStore.getAll();
-  
-      // si request funciona devuelve lista con todos los objetos
-      request.onsuccess = (event) => {
-        console.log(request.result);
-        resolve(request.result);
-      };
-  
-      // si request falla manda error
-      request.onerror = (event) => {
-        reject(event.target.error);
-      };
-    });
-  }
+  return new Promise((resolve, reject) => {
+    // variables de indexDB
+    let transaction = db.transaction([STORE_NAME], "readwrite");
+    let objectStore = transaction.objectStore(STORE_NAME);
+
+    // accionar getAll
+    let request = objectStore.getAll();
+
+    // si request funciona devuelve lista con todos los objetos
+    request.onsuccess = (event) => {
+      console.log(request.result);
+      resolve(request.result);
+    };
+
+    // si request falla manda error
+    request.onerror = (event) => {
+      reject(event.target.error);
+    };
+  });
+}
+
+function indexDBProvinceExists() {
+  return new Promise((resolve, reject) => {
+    var request = indexedDB.open(INDEXDB_NAME);
+    request.onupgradeneeded = (e) => {
+      resolve(false);
+    };
+    request.onerror = (e) => {
+      resolve(false);
+    };
+    request.onsuccess = (e) => {
+      resolve(true);
+    };
+  });
+}
+
+/**
+ * Ejemplo objetos comunidad autonoma:
+ * {
+ *  name : "nombre comunidad",
+ *  id: "id comunidad",
+ *  provinces: [
+  *  {
+  * name: "nombre de provincia",
+  *  id: "id provicia"
+  *  cities: [
+    *  {
+    * name: "nombre de ciudad",
+    *  id: "id ciudad"
+    * }, ....
+    * ]
+  * }, ...
+  * ]
+ * }
+ */
+
+export {
+  openDB,
+  getPriovinceDB,
+  addProvinceDB,
+  updateDB,
+  getAllDB,
+  indexDBProvinceExists,
+};
