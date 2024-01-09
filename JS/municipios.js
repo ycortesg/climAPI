@@ -15,7 +15,6 @@ let URLFinal = `${URLMunicipios}${idProvinciaURL}${finalURLMunicipios}`;
 fetch(URLFinal)
     .then(response => response.json())
     .then(datosProv => {
-        console.log(datosProv);
 
         const nombre = datosProv.provincia;
         const idProv = datosProv.codprov;
