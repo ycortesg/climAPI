@@ -165,8 +165,8 @@ function indexDBProvinceExists() {
   *  id: "id provicia"
   *  cities: [
     *  {
-    * name: "nombre de ciudad",
-    *  id: "id ciudad"
+    * name: "localidad",
+    *  id: "id localidad"
     * }, ....
     * ]
   * }, ...
