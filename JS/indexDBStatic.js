@@ -62,6 +62,7 @@ function getPriovinceDB(key) {
 function addProvinceDB(data) {
   openDB().then(() => {
     return new Promise((resolve, reject) => {
+      console.log(db);
       // variables de indexDB
       let transaction = db.transaction([STORE_NAME], "readwrite");
       let objectStore = transaction.objectStore(STORE_NAME);
