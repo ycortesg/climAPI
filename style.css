@@ -1,3 +1,37 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+
+.provincia {
+    cursor: pointer;
+    transition: 0.5s;
+}
 .provincia:hover {
     filter: brightness(70%);
+    transition: 0.5s;
+}
+.container {
+    
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.mapa {
+    width: 100%;
+    height: auto;
+    scale: 1.5;
+    background-color: aliceblue;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+@media (min-width: 768px) {
+    .mapa {
+        width: 80%;
+        height: auto;
+    }
 }
