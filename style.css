@@ -17,8 +17,8 @@
     align-items: center;
 }
 .mapa {
-    width: 100%; /* Asume el 100% del ancho en dispositivos pequeños */
-    height: auto; /* Mantiene la proporción del mapa */
+    width: 100%;
+    height: auto;
     scale: 1.5;
     background-color: aliceblue;
     background-size: cover;
@@ -29,10 +29,9 @@
     border-radius: 10px;
 }
 
-/* Cuando la pantalla tiene al menos 768px de ancho (tablets y dispositivos más grandes) */
 @media (min-width: 768px) {
     .mapa {
-        width: 80%; /* Asume el 80% del ancho en dispositivos más grandes */
-        height: auto; /* Mantiene la proporción del mapa */
+        width: 80%;
+        height: auto;
     }
 }
