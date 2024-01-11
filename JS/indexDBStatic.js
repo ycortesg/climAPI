@@ -1,6 +1,7 @@
 const INDEXDB_NAME = "staticDB";
 const INDEXDB_VERSION = 1;
 const STORE_NAME = "staticStore";
+let db;
 
 function openDB() {
   // Promesa para manejar operaciones asíncronas
@@ -30,7 +31,7 @@ function openDB() {
         // Crea un almacen de objetos (tabla), campo id como clave primaria y autoincremental
         let objectStore = db.createObjectStore(STORE_NAME, {
           keyPath: "id",
-          autoIncrement: true,
+          autoIncrement: false,
         });
         objectStore.createIndex("province", "province", { unique: true });
       }
@@ -59,7 +60,7 @@ function getPriovinceDB(key) {
   });
 }
 
-function addProvinceDB(data) {
+function addProvinceDB(data, idProv) {
   openDB().then(() => {
     return new Promise((resolve, reject) => {
       console.log(db);
@@ -68,7 +69,7 @@ function addProvinceDB(data) {
       let objectStore = transaction.objectStore(STORE_NAME);
 
       // accionar get
-      let request = objectStore.add(data);
+      let request = objectStore.put({id: idProv, value: data});
 
       // resuelve add
       request.onsuccess = (event) => {
