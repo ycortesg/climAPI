@@ -37,7 +37,7 @@ fetch(URLFinal)
         titulo.innerHTML = `${informacion.nombre}`;
         informacion.arrayObjMunicipio.forEach(elemento => {
     
-        lista.innerHTML += `<li>${elemento.nombreMun}</li>`
+        lista.innerHTML += `<li>${elemento.nombreMun}, ${elemento.poblacionMun}</li>`
     });
 
     })
