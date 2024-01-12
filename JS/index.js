@@ -22,7 +22,7 @@ fetch("../JSON/provincias.json")
     const buscarLupa = document.getElementById("buscarLupa");
 
     opciones.innerHTML = ``;
-    let codigoSeleccionado; // Variable para almacenar el código postal seleccionado
+    let codigoSeleccionado; 
 
     searchInput.addEventListener("input", () => {
       const searchTerm = searchInput.value.trim().toLowerCase();
@@ -30,27 +30,25 @@ fetch("../JSON/provincias.json")
       const results = Object.entries(provincias).filter(([provinciaNombre]) =>
         provinciaNombre.toLowerCase().includes(searchTerm)
       );
-  
+      
       opciones.innerHTML = ``;
 
       if (searchInput.value == ``) {
         opciones.innerHTML = ``;
       } else {
         results.forEach(([provinciaNombre, codigo]) => {
-          opciones.innerHTML += `<p>${provinciaNombre} con código ${codigo}</p>`;
-          // Almacenar el código postal en la variable al hacer clic en una opción
-          opciones.lastChild.addEventListener("click", () => {
+          opciones.innerHTML += `<p>${provinciaNombre}</p>`; // cambia aquí como quieres que salgan las opciones en el buscador 
+          if(results.length===1){
             codigoSeleccionado = codigo;
-          });
+          }
         });
       }
     });
 
     buscarLupa.addEventListener("click", () => {
-      // Redirigir a la página de municipios con el código postal seleccionado
-      if (codigoSeleccionado) {
+      if(codigoSeleccionado != null){
         window.location.href = `./PAGES/municipios.html?id=${codigoSeleccionado}`;
-      }
+      } 
     });
   });
 
