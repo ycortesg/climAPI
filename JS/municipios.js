@@ -12,8 +12,6 @@ const lista = document.getElementById("lista");
 let informacion;
 let arrayObjMunicipio = [];
 
-let URLFinal = `${URLMunicipios}${idProvinciaURL}${finalURLMunicipios}`;
-
 async function indexDBInicicial() {
   await indexDBStatic.openDB();
   informacion = await indexDBStatic.getPriovinceDB(idProvinciaURL);
