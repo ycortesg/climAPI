@@ -54,3 +54,7 @@ async function indexDBInicicial() {
 }
 
 indexDBInicicial().then(() => {});
+
+informacion.value.arrayObjMunicipio.forEach(() => {
+  
+});
