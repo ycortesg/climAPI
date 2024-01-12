@@ -63,3 +63,13 @@ async function indexDBInicicial() {
   });
 
 }
+
+indexDBInicicial().then(() => {
+});
+
+
+function generarEventoLink(divElement,IDMun){
+divElement.addEventListener("click", () =>{
+window.location.href = `../PAGES/municipioDetalles.html?id=${IDMun}`;
+});
+}
