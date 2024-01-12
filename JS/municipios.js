@@ -8,6 +8,7 @@ var idProvinciaURL = parametros.get(`id`);
 
 const titulo = document.getElementById("titulo");
 const lista = document.getElementById("lista");
+const contenedor = document.getElementById("contenedor"); 
 
 let informacion;
 let arrayObjMunicipio = [];
@@ -49,8 +50,26 @@ async function indexDBInicicial() {
   }
   titulo.innerHTML = `${informacion.value.nombre}`;
   informacion.value.arrayObjMunicipio.forEach((elemento) => {
-    lista.innerHTML += `<li>${elemento.nombreMun}</li>`;
+    //dibujitos aqui
+    let div = document.createElement("div");
+    div.id = elemento.IDMun;
+    div.classList.add("col-8","col-sm-6","col-md-4","col-lg-3","col-xl-2","bg-white","text-dark","card");
+    div.innerHTML +=`<div class="card-body">
+          <h5 class="card-title text-center ">${elemento.nombreMun}</h5>
+      </div>`; 
+      contenedor.appendChild(div);
+      generarEventoLink(div,elemento.IDMun);
+    //lista.innerHTML += `<li>${elemento.nombreMun}</li>`;
   });
+
 }
 
-indexDBInicicial().then(() => {});
+indexDBInicicial().then(() => {
+});
+
+
+function generarEventoLink(divElement,IDMun){
+  divElement.addEventListener("click", () =>{
+    window.location.href = `../PAGES/municipioDetalles.html?id=${IDMun}`;
+  });
+}
