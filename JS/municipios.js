@@ -70,7 +70,6 @@ indexDBInicicial().then(() => {
 
 function generarEventoLink(divElement,IDMun){
   divElement.addEventListener("click", () =>{
-   // window.location.href = `./municipiosDetalles.html?id=${IDMun}`;
-    window.location.href = `municipiosDetalles.html`;
+    window.location.href = `../PAGES/municipioDetalles.html?id=${IDMun}`;
   });
 }
