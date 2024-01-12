@@ -4,6 +4,9 @@
     cursor: pointer;
     transition: 0.5s;
 }
+.card:hover{
+    cursor:pointer;
+}
 .provincia:hover {
     filter: brightness(70%);
     transition: 0.5s;
