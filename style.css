@@ -1,35 +1,64 @@
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
-:root{
-    --color-1: #5b5b59;
-    --color-2: #ebc177;
-    --color-3: #faa707;
-    --color-4: #f97607;
-    --color-5: #e5a63d;
-    --color-6: #ecbc53;
-    --color-7: #51514c;
-    --color-8: #d48e32;
+
+::-webkit-scrollbar {
+    width: 10px;
 }
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #d4dce4;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #d4dce4;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 .provincia {
     cursor: pointer;
     transition: 0.5s;
 }
+
 .provincia:hover {
     filter: brightness(70%);
     transition: 0.5s;
 }
-.container {
-    
-    width: 100vw;
-    height: 100vh;
+
+.prediccion {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
+.btn-group{
+    background-color: #fff;
+}
+
+.container {
+    background-color: #d4dce4;
+    width: 100vw;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
 .mapa {
     width: 100%;
     height: auto;
     scale: 1.5;
-    background-color: aliceblue;
+    background-color: #f0f8ff;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -38,9 +67,18 @@
     border-radius: 10px;
 }
 
-@media (min-width: 768px) {
+.container-fluid {
+    background-color: #5a93bd;
+    margin-top: -10px;
+    padding: 0;
+
+}
+
+
+@media (max-width: 768px) {
     .mapa {
-        width: 80%;
+        width: 100%;
         height: auto;
+        scale: 1;
     }
 }
