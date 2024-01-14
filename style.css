@@ -1,5 +1,14 @@
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
-
+:root{
+    --color-1: #5b5b59;
+    --color-2: #ebc177;
+    --color-3: #faa707;
+    --color-4: #f97607;
+    --color-5: #e5a63d;
+    --color-6: #ecbc53;
+    --color-7: #51514c;
+    --color-8: #d48e32;
+}
 .provincia {
     cursor: pointer;
     transition: 0.5s;
