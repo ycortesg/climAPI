@@ -1,0 +1,40 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+h1 {
+    color: #333;
+    text-align: center;
+}
+
+h3, h4, h5 {
+    color: #666;
+}
+
+#titulo {
+    margin-top: 20px;
+}
+
+#nombreProvincia, #poblacionMunicipio, #altitudMunicipio, #estadoCieloMunicipio {
+    margin-left: 20px;
+}
+
+#temperaturaActual, #humedadMunicipio, #vientoMunicipio, #precipitacionesMunicipio, #municipioLluvia {
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+#pronosticos, #proximosDias {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+#pronosticos > div, #proximosDias > div {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
