@@ -1,40 +1,58 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f0f0f0;
 }
 
 h1 {
-    color: #333;
+    color: #2c3e50;
     text-align: center;
+    padding: 20px 0;
+    background-color: #ecf0f1;
 }
 
 h3, h4, h5 {
-    color: #666;
+    color: #7f8c8d;
+    margin-left: 20px;
 }
 
 #titulo {
-    margin-top: 20px;
+    border-bottom: 1px solid #bdc3c7;
 }
 
-#nombreProvincia, #poblacionMunicipio, #altitudMunicipio, #estadoCieloMunicipio {
-    margin-left: 20px;
+#estadoCielo {
+    display: block;
+    margin: 20px auto;
 }
 
-#temperaturaActual, #humedadMunicipio, #vientoMunicipio, #precipitacionesMunicipio, #municipioLluvia {
-    margin-left: 20px;
-    margin-top: 10px;
+#temperaturaActual {
+    font-size: 24px;
+    font-weight: bold;
+    color: #e74c3c;
+}
+
+#temperatura-min, #temperatura-max {
+    display: inline-block;
+    margin: 0 10px;
+    color: #3498db;
 }
 
 #pronosticos, #proximosDias {
     display: flex;
     justify-content: space-around;
-    margin-top: 20px;
+    margin: 20px 0;
 }
 
 #pronosticos > div, #proximosDias > div {
     padding: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid #bdc3c7;
     border-radius: 5px;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: #ecf0f1;
 }
