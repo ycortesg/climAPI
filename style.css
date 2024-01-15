@@ -1,29 +1,63 @@
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
 
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #d4dce4;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #d4dce4;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 .provincia {
     cursor: pointer;
     transition: 0.5s;
 }
-.card:hover{
-    cursor:pointer;
-}
+
 .provincia:hover {
     filter: brightness(70%);
     transition: 0.5s;
 }
-.container {
-    
-    width: 100vw;
-    height: 100vh;
+
+.prediccion {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
+.btn-group{
+    background-color: #fff;
+}
+
+.container {
+    width: 100vw;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
 .mapa {
     width: 100%;
     height: auto;
     scale: 1.5;
-    background-color: aliceblue;
+    background-color: #f0f8ff;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -31,10 +65,23 @@
     border: 1px solid black;
     border-radius: 10px;
 }
+#top{
+    background-color: #5a93bd;
+    margin-top: -10px;
+    padding: 0;
+}
+.container-fluid{
+    background-color: #5a93bd;
+    margin-top: 10px;
+    padding: 0;
 
-@media (min-width: 768px) {
+}
+
+
+@media (max-width: 768px) {
     .mapa {
-        width: 80%;
+        width: 100%;
         height: auto;
+        scale: 1;
     }
 }
