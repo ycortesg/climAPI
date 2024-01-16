@@ -13,7 +13,8 @@ indexDBFav.openDB().then(()=>{
                 <button id="detalles" class="bg-info">Detalles</button>
                 <button id="eliminar" class="bg-danger">Eliminar</button>
             </div>`;
-          document.body.appendChild(div);
+           let favoritos = document.getElementById(`favoritos`);
+           favoritos.appendChild(div);
           generarEventoLink(div.querySelector("button#detalles"), elemento.IDMun);
           generarEliminarEvento(div, elemento.IDMun, div.querySelector("button#eliminar"))
         })
