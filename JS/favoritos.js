@@ -10,8 +10,8 @@ indexDBFav.openDB().then(()=>{
           div.classList.add("col-12", "col-sm-6", "col-md-4", "col-lg-3", "bg-white", "text-dark", "card");
           div.innerHTML = `<div class="card-body" id="municipiosCarta">
                 <h5 class="card-title text-center ">${elemento.nombreMun}</h5>
-                <button id="detalles" class="bg-info">Detalles</button>
-                <button id="eliminar" class="bg-danger">Eliminar</button>
+                <button id="detalles" class="bg-info btn btn-primary ">Detalles</button>
+                <button id="eliminar" class="bg-danger btn btn-primary ">Eliminar</button>
             </div>`;
            let favoritos = document.getElementById(`favoritos`);
            favoritos.appendChild(div);
