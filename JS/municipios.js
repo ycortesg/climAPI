@@ -77,7 +77,7 @@ async function indexDBInicicial() {
       div.innerHTML = `<div class="card-body" id="municipiosCarta">
             <h5 class="card-title text-center ">${elemento.nombreMun}</h5>
             <button id="favorito" class="bg-info">Fav</button>
-            <button id="detalles" ${indexDBFav.getTownDB(elemento.IDMun)}>Detalles</button>
+            <button id="detalles">Detalles</button>
         </div>`;
       contenedor.appendChild(div);
       generarEventoLink(div.querySelector("button#detalles"), elemento.IDMun);
