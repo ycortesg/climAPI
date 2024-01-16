@@ -62,19 +62,6 @@ async function indexDBInicicial() {
 
   titulo.innerHTML = `${informacion.value.nombre}`;
 
-  informacion.value.arrayObjMunicipio.forEach((elemento) => {
-    //dibujitos aqui
-    let div = document.createElement("div");
-    div.id = elemento.IDMun;
-    div.classList.add("col-8","col-sm-6","col-md-4","col-lg-3","col-xl-2","bg-white","text-dark","card");
-    div.innerHTML +=`<div class="card-body" id="municipiosCarta">
-          <h5 class="card-title text-center ">${elemento.nombreMun}</h5>
-      </div>`; 
-      contenedor.appendChild(div);
-      generarEventoLink(div,elemento.IDMun);
-    //lista.innerHTML += `<li>${elemento.nombreMun}</li>`;
-  });
-
 
   for (let letra in grupos) {
     let divLetra = document.createElement("div");
@@ -85,7 +72,7 @@ async function indexDBInicicial() {
       let div = document.createElement("div");
       div.id = elemento.IDMun;
       div.classList.add("col-12", "col-sm-6", "col-md-4", "col-lg-3", "bg-white", "text-dark", "card");
-      div.innerHTML += `<div class="card-body" id="municipiosCarta">
+      div.innerHTML = `<div class="card-body" id="municipiosCarta">
             <h5 class="card-title text-center ">${elemento.nombreMun}</h5>
         </div>`;
       contenedor.appendChild(div);
