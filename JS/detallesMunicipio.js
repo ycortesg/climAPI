@@ -3,19 +3,19 @@ let idMunicipioURL = parametros.get(`id`);
 
 let titulo = document.querySelector("h1#titulo");
 let nombreProvincia = document.querySelector("h3#nombreProvincia");
-let poblacionProvincia = document.querySelector("h5#poblacionMunicipio");
-let altitudMunicipio = document.querySelector("h5#altitudMunicipio");
-let estadoCieloMunicipio = document.querySelector("h5#estadoCieloMunicipio");
+let poblacionProvincia = document.querySelector("span#poblacionMunicipio");
+let altitudMunicipio = document.querySelector("span#altitudMunicipio");
+let estadoCieloMunicipio = document.querySelector("span#estadoCieloMunicipio");
 let imagenEstadoMunicipioCielo = document.querySelector("img#estadoCielo");
-let temperaturaActual = document.querySelector("h4#temperaturaActual");
+let temperaturaActual = document.querySelector("span#temperaturaActual");
 
-let temperaturaMin = document.querySelector("h5#temperatura-min");
-let temperaturaMax = document.querySelector("h5#temperatura-max");
+let temperaturaMin = document.querySelector("span#temperatura-min");
+let temperaturaMax = document.querySelector("span#temperatura-max");
 
-let humedadMunicipio = document.querySelector("h4#humedadMunicipio");
-let vientoMunicipio = document.querySelector("h4#vientoMunicipio");
-let precipitacionesMunicipio = document.querySelector("h4#precipitacionesMunicipio");
-let municipioLluvia = document.querySelector("h4#municipioLluvia");
+let humedadMunicipio = document.querySelector("span#humedadMunicipio");
+let vientoMunicipio = document.querySelector("span#vientoMunicipio");
+let precipitacionesMunicipio = document.querySelector("span#precipitacionesMunicipio");
+let municipioLluvia = document.querySelector("span#municipioLluvia");
 let hoyPronostico =  document.querySelector("div#hoy");
 let mananaPronostico =  document.querySelector("div#manana");
 
@@ -25,7 +25,6 @@ let pronosticosDia2 = document.querySelector("div#p2");
 let pronosticosDia3 = document.querySelector("div#p3");
 let pronosticosDia4 = document.querySelector("div#p4");
 let pronosticosDia5 = document.querySelector("div#p5");
-
 
 const URLMunicipios = `https://www.el-tiempo.net/api/json/v2/provincias/${idMunicipioURL.substring(0,2)}/municipios/${idMunicipioURL}`;
 
@@ -65,4 +64,3 @@ fetch(URLMunicipios)
     pronosticosDia4.innerText = data.proximos_dias[4];
     pronosticosDia5.innerText = data.proximos_dias[5];
 });
-
