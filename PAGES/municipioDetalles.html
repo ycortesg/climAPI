@@ -1,37 +1,57 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tiempo </title>
+    <title>Tiempo</title>
     <link rel="stylesheet" href="/CSS/municipiosDetalles.css">
     <script src="../JS/detallesMunicipio.js" defer type="module"></script>
-    
 </head>
+
 <body>
-    <h1 id="titulo">Tiempo <br></h1>
-    <h3 id="nombreProvincia"></h3>
-    <h5 id="poblacionMunicipio"></h5>
-    <h5 id="altitudMunicipio"></h5>
-    <h5 id="estadoCieloMunicipio"></h5>
-    <img id="estadoCielo">
-    <h4 id="temperaturaActual"></h4>
-    <div > <h5 id="temperatura-min"></h5><h5 id="temperatura-max"></h5></div>
-    <h4 id="humedadMunicipio"></h4>
-    <h4 id="vientoMunicipio"></h4>
-    <h4 id="precipitacionesMunicipio"></h4>
-    <h4 id="municipioLluvia"></h4>
-    <div id="pronosticos">
-        <div id="hoy"></div>
-        <div id="manana"></div>
-    </div>
-    <div id="proximosDias">
-        <div id="p0"></div>
-        <div id="p1"></div>
-        <div id="p2"></div>
-        <div id="p3"></div>
-        <div id="p4"></div>
-        <div id="p5"></div>
-    </div>
+    <header>
+        <h1 id="titulo">Tiempo <br></h1>
+    </header>
+    <main>
+        <section id="detallesMunicipio">
+            <h3 id="nombreProvincia"></h3>
+            <div>
+                <h5>Población: <span id="poblacionMunicipio"></span></h5>
+                <h5>Altitud: <span id="altitudMunicipio"></span></h5>
+            </div>
+            <div>
+                <h5>Estado del cielo: <span id="estadoCieloMunicipio"></span></h5>
+                <img id="estadoCielo" alt="Imagen del estado del cielo">
+            </div>
+            <div>
+                <h4>Temperatura actual: <span id="temperaturaActual"></span></h4>
+                <h5>Temperatura mínima: <span id="temperatura-min"></span></h5>
+                <h5>Temperatura máxima: <span id="temperatura-max"></span></h5>
+            </div>
+            <div>
+                <h4>Humedad: <span id="humedadMunicipio"></span></h4>
+                <h4>Viento: <span id="vientoMunicipio"></span></h4>
+                <h4>Precipitaciones: <span id="precipitacionesMunicipio"></span></h4>
+                <h4>Lluvia: <span id="municipioLluvia"></span></h4>
+            </div>
+        </section>
+        <section id="pronosticoTiempo">
+            <h3>Pronóstico del tiempo</h3>
+            <div id="pronosticos">
+                <div id="hoy">Hoy</div>
+                <div id="manana">Mañana</div>
+            </div>
+            <div id="proximosDias">
+                <div id="p0">Día 1</div>
+                <div id="p1">Día 2</div>
+                <div id="p2">Día 3</div>
+                <div id="p3">Día 4</div>
+                <div id="p4">Día 5</div>
+                <div id="p5">Día 6</div>
+            </div>
+        </section>
+    </main>
 </body>
+
 </html>

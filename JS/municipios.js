@@ -8,7 +8,7 @@ var idProvinciaURL = parametros.get(`id`);
 
 const titulo = document.getElementById("titulo");
 const lista = document.getElementById("lista");
-const contenedor = document.getElementById("contenedor"); 
+const contenedor = document.getElementById("contenedor");
 
 let informacion;
 let arrayObjMunicipio = [];
@@ -46,32 +46,46 @@ async function indexDBInicicial() {
     informacion.arrayObjMunicipio = arrayObjMunicipio;
     await indexDBStatic.addProvinceDB(informacion, idProv);
 
-    informacion = {id: idProv, value: informacion};
+    informacion = { id: idProv, value: informacion };
   }
-  titulo.innerHTML = `${informacion.value.nombre}`;
-  informacion.value.arrayObjMunicipio.forEach((elemento) => {
-    //dibujitos aqui
-    let div = document.createElement("div");
-    div.id = elemento.IDMun;
-    div.classList.add("col-8","col-sm-6","col-md-4","col-lg-3","col-xl-2","bg-white","text-dark","card");
-    div.innerHTML +=`<div class="card-body" id="municipiosCarta">
-          <h5 class="card-title text-center ">${elemento.nombreMun}</h5>
-      </div>`; 
-      contenedor.appendChild(div);
-      generarEventoLink(div,elemento.IDMun);
-    //lista.innerHTML += <li>${elemento.nombreMun}</li>;
-  });
 
+  informacion.value.arrayObjMunicipio.sort((a, b) => a.nombreMun.localeCompare(b.nombreMun));
+
+  let grupos = informacion.value.arrayObjMunicipio.reduce((grupos, municipio) => {
+    let letra = municipio.nombreMun[0].toUpperCase();
+    if (!grupos[letra]) {
+      grupos[letra] = [];
+    }
+    grupos[letra].push(municipio);
+    return grupos;
+  }, {});
+
+  titulo.innerHTML = `${informacion.value.nombre}`;
+
+
+  for (let letra in grupos) {
+    let divLetra = document.createElement("div");
+    divLetra.innerHTML = `<h2>${letra}</h2>`;
+    contenedor.appendChild(divLetra);
+
+    grupos[letra].forEach((elemento) => {
+      let div = document.createElement("div");
+      div.id = elemento.IDMun;
+      div.classList.add("col-12", "col-sm-6", "col-md-4", "col-lg-3", "bg-white", "text-dark", "card");
+      div.innerHTML += `<div class="card-body" id="municipiosCarta">
+            <h5 class="card-title text-center ">${elemento.nombreMun}</h5>
+        </div>`;
+      contenedor.appendChild(div);
+      generarEventoLink(div, elemento.IDMun);
+    });
+  }
 }
 
 indexDBInicicial().then(() => {
 });
 
-
-
-
-function generarEventoLink(divElement,IDMun){
-divElement.addEventListener("click", () =>{
-window.location.href = `../PAGES/municipioDetalles.html?id=${IDMun}`;
-});
+function generarEventoLink(divElement, IDMun) {
+  divElement.addEventListener("click", () => {
+    window.location.href = `../PAGES/municipioDetalles.html?id=${IDMun}`;
+  });
 }

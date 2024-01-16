@@ -1,0 +1,17 @@
+{
+    "despejado": "https://ejemplo.com/imagenes/despejado.png",
+    "nublado": "https://ejemplo.com/imagenes/nublado.png",
+    "lluvioso": "https://ejemplo.com/imagenes/lluvioso.png",
+    "parcialmente nublado": "https://ejemplo.com/imagenes/parcialmente_nublado.png",
+    "tormenta": "https://ejemplo.com/imagenes/tormenta.png",
+    "nieve": "https://ejemplo.com/imagenes/nieve.png",
+    "bruma": "https://ejemplo.com/imagenes/bruma.png",
+    "niebla": "https://ejemplo.com/imagenes/niebla.png",
+    "granizo": "https://ejemplo.com/imagenes/granizo.png",
+    "llovizna": "https://ejemplo.com/imagenes/llovizna.png",
+    "chubascos": "https://ejemplo.com/imagenes/chubascos.png",
+    "viento fuerte": "https://ejemplo.com/imagenes/viento_fuerte.png",
+    "cielo cubierto": "https://ejemplo.com/imagenes/cielo_cubierto.png",
+    "cielo despejado": "https://ejemplo.com/imagenes/cielo_despejado.png",
+    "cielo parcialmente cubierto": "https://ejemplo.com/imagenes/cielo_parcialmente_cubierto.png"
+}
