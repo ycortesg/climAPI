@@ -1,0 +1,23 @@
+*{
+    margin: 0px;
+    overflow-x: hidden;
+} 
+
+.card{
+    height: 100px;
+    padding: 0px;
+}
+
+#municipiosCarta:hover{
+    cursor: pointer;
+    background-color: #e7e7e7;
+    border-radius: 5px;
+}
+
+h5{
+    overflow: hidden;
+}
+
+h1{
+    overflow: hidden;
+}

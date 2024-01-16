@@ -38,7 +38,7 @@ function getSVG(idCielo){
 fetch(URLMunicipios)
   .then((response) => response.json())
   .then((data) => {
-    titulo.innerText += data.municipio.NOMBRE;
+    titulo.innerText = data.municipio.NOMBRE;
     nombreProvincia.innerText = data.municipio.NOMBRE_PROVINCIA;
     poblacionProvincia.innerText = data.municipio.POBLACION_MUNI;
     altitudMunicipio.innerText = data.municipio.ALTITUD;
