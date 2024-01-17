@@ -14,7 +14,7 @@ Array.from(document.querySelectorAll(".provincia")).forEach((e) => {
 });
 
 
-fetch("../JSON/provincias.json")
+fetch("JSON/provincias.json")
   .then(response => response.json())
   .then(provincias => {
     const searchInput = document.getElementById("buscador");
