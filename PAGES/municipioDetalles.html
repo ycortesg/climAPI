@@ -4,14 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tiempo</title>
-    <link rel="stylesheet" href="/CSS/municipiosDetalles.css">
+    <title>ClimAPI/Municipio/Detalles</title>
+    <link rel="icon" type="image/png" href="../logo3.png">
+    <link rel="stylesheet" href="../CSS/municipiosDetalles.css">
     <script src="../JS/detallesMunicipio.js" defer type="module"></script>
-    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="../style.css">
     <script src="/JS/index.js" defer></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-		integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 
 <body>
@@ -19,29 +20,35 @@
     <header>
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
             <div class="container-fluid" id="top">
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03"
-                    aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false"
+                    aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <a class="navbar-brand" href="/index.html">
-                    <img src="/logo2.png" alt="Logo" width="100" height="80" class="d-inline-block align-text-top m-2">
+                <a class="navbar-brand" href="../index.html">
+                    <img src="../logo2.png" alt="Logo" width="100" height="80"
+                        class="d-inline-block align-text-top m-2">
                 </a>
-    
+
                 <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#"><h4>Comunidades</h4></a>
+                            <a class="nav-link active" aria-current="page" href="#">
+                                <h4>Comunidades</h4>
+                            </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#"><h4>Favoritos</h4></a>
+                            <a class="nav-link" href="../PAGES/favoritos.html">
+                                <h4>Favoritos</h4>
+                            </a>
                         </li>
-    
+
                     </ul>
-                    
+
                 </div>
             </div>
         </nav>
-        <h1 id="titulo">Tiempo <br></h1>
+        <h1 id="titulo"></h1>
     </header>
     <main>
         <section id="detallesMunicipio">
@@ -55,60 +62,61 @@
                 <img id="estadoCielo" alt="Imagen del estado del cielo">
             </div>
             <div>
-                <h4>Temperatura actual: <span id="temperaturaActual"></span></h4>
-                <h5>Temperatura mínima: <span id="temperatura-min"></span></h5>
-                <h5>Temperatura máxima: <span id="temperatura-max"></span></h5>
+                <h4>Temperatura actual: <span id="temperaturaActual"></span>º</h4>
+                <h5>Temperatura mínima: <span id="temperatura-min"></span>º</h5>
+                <h5>Temperatura máxima: <span id="temperatura-max"></span>º</h5>
             </div>
             <div>
-                <h4>Humedad: <span id="humedadMunicipio"></span></h4>
-                <h4>Viento: <span id="vientoMunicipio"></span></h4>
+                <h4>Humedad: <span id="humedadMunicipio"></span>%</h4>
+                <h4>Viento: <span id="vientoMunicipio"></span> km/h</h4>
                 <h4>Precipitaciones: <span id="precipitacionesMunicipio"></span></h4>
-                <h4>Lluvia: <span id="municipioLluvia"></span></h4>
+                <h4>Lluvia: <span id="municipioLluvia"></span>%</h4>
             </div>
         </section>
-       
+
     </main>
     <footer>
-		<nav class="navbar navbar-expand-lg bg-body-tertiary">
-			<div class="container-fluid p-3 ">
-				
-				<ul class="navbar-nav me-auto mb-2 mb-lg-0">
-					<li class="nav-item">
-						<a class="navbar-brand" href="/index.html">
-							<img src="/logo2.png" alt="Logo" width="100" height="80" class="d-inline-block align-text-top m-2">
-						</a>
-					</li>
-				</ul>
-					<ul class="navbar-nav me-auto mb-2 mb-lg-0">
-						<li class="nav-item">
-							<a class="nav-link" aria-current="page" href="https://github.com/CarrascoOliva"
-								target="_blank"><i class="bi bi-github"></i> CarrascoOliva</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="https://github.com/ycortesg" target="_blank"><i
-									class="bi bi-github"></i>
-								ycortesg</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="https://github.com/SergioGarciaPizarro" target="_blank"><i
-									class="bi bi-github"></i>
-								SergioGarciaPizarro</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="https://github.com/elsergio130v"><i class="bi bi-github"
-									target="_blank"></i>
-								elsergio130v</a>
-						</li>
-					</ul>
-					<ul class="navbar-nav  mb-2 mb-lg-0">
-						<li class="nav-item">
-							<a class="nav-link" ><i class="bi bi-c-circle"></i>Copyright</a>
-					</ul>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid p-3 ">
 
-				
-			</div>
-		</nav>
-	</footer>
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="navbar-brand" href="../index.html">
+                            <img src="../logo2.png" alt="Logo" width="100" height="80"
+                                class="d-inline-block align-text-top m-2">
+                        </a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="https://github.com/CarrascoOliva"
+                            target="_blank"><i class="bi bi-github"></i> CarrascoOliva</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://github.com/ycortesg" target="_blank"><i
+                                class="bi bi-github"></i>
+                            ycortesg</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://github.com/SergioGarciaPizarro" target="_blank"><i
+                                class="bi bi-github"></i>
+                            SergioGarciaPizarro</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://github.com/elsergio130v"><i class="bi bi-github"
+                                target="_blank"></i>
+                            elsergio130v</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav  mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link"><i class="bi bi-c-circle"></i>Copyright</a>
+                </ul>
+
+
+            </div>
+        </nav>
+    </footer>
 
 </body>
 

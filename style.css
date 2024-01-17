@@ -23,7 +23,15 @@
     padding: 0;
     box-sizing: border-box;
 }
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
 
+footer {
+    margin-top: auto;
+}
 .provincia {
     cursor: pointer;
     transition: 0.5s;
@@ -79,7 +87,14 @@
 #opciones{
     display: none;
 }
-
+.letra-separadora {
+    padding: 0.5em;
+    font-size: 2em; 
+    font-weight: bold; 
+    text-align: center; 
+    background-color: #5a93bd;
+    justify-content: center;
+}
 @media (max-width: 768px) {
     .mapa {
         width: 100%;

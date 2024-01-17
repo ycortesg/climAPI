@@ -69,7 +69,7 @@ function addTownDB(data, idProv) {
       let objectStore = transaction.objectStore(STORE_NAME);
 
       // accionar get
-      let request = objectStore.put({id: idProv, value: data});
+      let request = objectStore.put({ id: idProv, value: data });
 
       // resuelve add
       request.onsuccess = (event) => {
@@ -85,26 +85,26 @@ function addTownDB(data, idProv) {
 }
 
 function deleteTownDB(id) {
-    openDB().then(() => {
-        return new Promise((resolve, reject) => {
-          // variables de indexDB
-          let transaction = db.transaction([STORE_NAME], "readwrite");
-          let objectStore = transaction.objectStore(STORE_NAME);
-    
-          // accionar get
-          let request = objectStore.delete(id);
-    
-          // resuelve add
-          request.onsuccess = (event) => {
-            resolve();
-          };
-    
-          // devuelve error
-          request.onerror = (event) => {
-            reject(event.target.error);
-          };
-        });
-      });
+  openDB().then(() => {
+    return new Promise((resolve, reject) => {
+      // variables de indexDB
+      let transaction = db.transaction([STORE_NAME], "readwrite");
+      let objectStore = transaction.objectStore(STORE_NAME);
+
+      // accionar get
+      let request = objectStore.delete(id);
+
+      // resuelve add
+      request.onsuccess = (event) => {
+        resolve();
+      };
+
+      // devuelve error
+      request.onerror = (event) => {
+        reject(event.target.error);
+      };
+    });
+  });
 }
 
 function getAllDB() {

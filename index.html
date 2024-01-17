@@ -5,7 +5,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>ClimAPI</title>
-	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="./style.css">
 	<link rel="icon" type="image/png" href="logo3.png">
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
 		integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
@@ -21,35 +21,39 @@
 				<span class="navbar-toggler-icon"></span>
 			</button>
 			<a class="navbar-brand" href="#">
-				<img src="logo2.png" alt="Logo" width="100" height="80" class="d-inline-block align-text-top m-2">
+				<img src="./logo2.png" alt="Logo" width="100" height="80" class="d-inline-block align-text-top m-2">
 			</a>
 
 			<div class="collapse navbar-collapse" id="navbarTogglerDemo03">
 				<ul class="navbar-nav me-auto mb-2 mb-lg-0">
 					<li class="nav-item">
-						<a class="nav-link active" aria-current="page" href="#"><h4>Comunidades</h4></a>
+						<a class="nav-link active" aria-current="page" href="#">
+							<h4>Comunidades</h4>
+						</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="./PAGES/favoritos.html"><h4>Favoritos</h4></a>
+						<a class="nav-link" href="./PAGES/favoritos.html">
+							<h4>Favoritos</h4>
+						</a>
 					</li>
 
 				</ul>
-				
+
 				<form class="btn-group" aria-label="Basic example" role="search">
 					<input class="form-control me-2" id="buscador" type="search" placeholder="comunidades/provincias..."
 						aria-label="Search">
-						<div id="opciones"></div>
+					<div id="opciones"></div>
 					<a id="buscarLupa" class="btn btn-light"><i class="bi bi-search"></i></a>
 				</form>
 			</div>
 		</div>
 	</nav>
-	<div class="prediccion" >
+	<div class="prediccion">
 		<h3>Predicción por municipios</h3>
 		<p>Seleccione la Provincia o Ciudad Autónoma.</p>
 	</div>
 	<div class="container">
-		
+
 		<div class="contenedor_imagen_mapa fondo_svg">
 			<object type="image/svg+xml" data="ai144412088610.svg" width="100%" height="auto">
 				<svg class="mapa" preserveAspectRatio="xMidYMin slice" xmlns:x="http://ns.adobe.com/Extensibility/1.0/"
@@ -3670,41 +3674,42 @@
 	<footer>
 		<nav class="navbar navbar-expand-lg bg-body-tertiary">
 			<div class="container-fluid p-3 ">
-				
+
 				<ul class="navbar-nav me-auto mb-2 mb-lg-0">
 					<li class="nav-item">
 						<a class="navbar-brand" href="#">
-							<img src="logo2.png" alt="Logo" width="100" height="80" class="d-inline-block align-text-top m-2">
+							<img src="./logo2.png" alt="Logo" width="100" height="80"
+								class="d-inline-block align-text-top m-2">
 						</a>
 					</li>
 				</ul>
-					<ul class="navbar-nav me-auto mb-2 mb-lg-0">
-						<li class="nav-item">
-							<a class="nav-link" aria-current="page" href="https://github.com/CarrascoOliva"
-								target="_blank"><i class="bi bi-github"></i> CarrascoOliva</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="https://github.com/ycortesg" target="_blank"><i
-									class="bi bi-github"></i>
-								ycortesg</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="https://github.com/SergioGarciaPizarro" target="_blank"><i
-									class="bi bi-github"></i>
-								SergioGarciaPizarro</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="https://github.com/elsergio130v"><i class="bi bi-github"
-									target="_blank"></i>
-								elsergio130v</a>
-						</li>
-					</ul>
-					<ul class="navbar-nav  mb-2 mb-lg-0">
-						<li class="nav-item">
-							<a class="nav-link" ><i class="bi bi-c-circle"></i>Copyright</a>
-					</ul>
+				<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+					<li class="nav-item">
+						<a class="nav-link" aria-current="page" href="https://github.com/CarrascoOliva"
+							target="_blank"><i class="bi bi-github"></i> CarrascoOliva</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="https://github.com/ycortesg" target="_blank"><i
+								class="bi bi-github"></i>
+							ycortesg</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="https://github.com/SergioGarciaPizarro" target="_blank"><i
+								class="bi bi-github"></i>
+							SergioGarciaPizarro</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="https://github.com/elsergio130v"><i class="bi bi-github"
+								target="_blank"></i>
+							elsergio130v</a>
+					</li>
+				</ul>
+				<ul class="navbar-nav  mb-2 mb-lg-0">
+					<li class="nav-item">
+						<a class="nav-link"><i class="bi bi-c-circle"></i>Copyright</a>
+				</ul>
 
-				
+
 			</div>
 		</nav>
 	</footer>
